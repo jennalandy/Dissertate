@@ -1,6 +1,6 @@
 # Harvard Dissertation LaTeX Template for Overleaf
 
-The template originally posted by GitHub user [suchow](https://github.com/suchow/Dissertate) does not compile in Overleaf out of the box, and does not satisfy the current Harvard format requirements (see list of specific changes below). Using these changes, I submitted my dissertation to Harvard Graduate School of Arts and Sciences in November 2025 and it was accepted by ProQuest/EDT.
+The template originally posted by GitHub user [suchow](https://github.com/suchow/Dissertate) does not compile in Overleaf out of the box, and does not satisfy the current Harvard format requirements (see list of specific changes below). Using these changes, I submitted my dissertation to Harvard Graduate School of Arts and Sciences in November 2025, and it was accepted by ProQuest/EDT.
 
 This is not a replacement as I have not tested its local LaTeX compilation, and I have only kept files relevant to Harvard.
 
