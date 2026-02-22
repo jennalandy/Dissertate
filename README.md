@@ -6,16 +6,16 @@ This is not a replacement as I have not tested its local LaTeX compilation, and 
 
 # How to Use
 
-1. Minor changes required in `assets/schools/Harvard/style.sty`:
-    - Line 55: Update copyright year with your year of completion
-    - Line 67: If applicable, replace ``Dissertation'' with ``Thesis''
-2. Update personal information in `assets/latex-base/frontmatter`
+1. Minor changes required in [`assets/schools/Harvard/style.sty`](assets/schools/Harvard/style.sty):
+    - Line 58: Update copyright year with your year of completion
+    - Line 71: If applicable, replace ``Dissertation'' with ``Thesis''
+2. Update personal information in [`assets/latex-base/frontmatter`](assets/latex-base/frontmatter)
     - `personalize.tex`: Author, advisor, and degree information
     - `dedication.tex` brief dedication
     - `thanks.tex`: extended acknowledgements section
     - `authorlist.tex`: list authors who contributed to each chapter
     - `abstract.tex`: overarching abstract for entire dissertation
-3. Write dissertation content inside of `assets/latex-base/chapters`
+3. Write dissertation content inside of [`assets/latex-base/chapters`](assets/latex-base/chapters)
    - `chapter#.tex`: chapter title, chapter preface (before introduction), and *optional* footnote if material appears elsewhere 
    - `chatper#_manuscript.tex`: useful if copying contents over from a completed manuscript
    - `chapter\#_appendix.tex`: *optional* appendix for each chapter. *Not required by Harvard*
