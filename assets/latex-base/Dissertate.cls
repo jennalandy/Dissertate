@@ -88,13 +88,13 @@
 \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
 \setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
 \setmonofont[Scale=MatchLowercase]{Source Code Pro}
-\RequirePackage[labelfont={bf,sf,footnotesize,singlespacing},
-                textfont={sf,footnotesize,singlespacing},
-                justification={justified,RaggedRight},
-                singlelinecheck=false,
-                margin=0pt,
-                figurewithin=chapter,
-                tablewithin=chapter]{caption}
+% \RequirePackage[labelfont={bf,sf,footnotesize,singlespacing},
+%                 textfont={sf,footnotesize,singlespacing},
+%                 justification={justified,RaggedRight},
+%                 singlelinecheck=false,
+%                 margin=0pt,
+%                 figurewithin=chapter,
+%                 tablewithin=chapter]{caption}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \RequirePackage{microtype}
 
@@ -112,8 +112,7 @@
 \usepackage[titletoc]{appendix}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchapfont}{\normalsize \scshape}
-\renewcommand\listfigurename{Listing of figures}
-\renewcommand\listtablename{Listing of tables}
+\renewcommand\listfigurename{Listing of figures\vspace{-1mm}}
 
 % Endmatter
 \renewcommand{\setthesection}{\arabic{chapter}.A\arabic{section}}

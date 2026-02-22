@@ -24,7 +24,8 @@
 	\copyrightpage
 	\abstractpage
     \contentspage
-	% \listoffigures % optional
+	\listoffigures
+    \authorlist
 	\dedicationpage
 	\acknowledgments
 }
@@ -54,7 +55,7 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2014\hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \copyright \small 2025\hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
 	\newpage
@@ -67,7 +68,7 @@
 	\pagenumbering{roman}
 	\setcounter{page}{3}
 	\pagestyle{fancy}
-	\lhead{Thesis advisor: Professor \@advisor} \rhead{\@author}
+	\lhead{Dissertation Advisor: Professor \@advisor} \rhead{\@author}
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
@@ -85,7 +86,11 @@
 
 \newcommand{\contentspage}{
     \pdfbookmark{\contentsname}{Contents}
+    \cleardoublepage
+    \phantomsection        % needed if hyperref is loaded
+    \addcontentsline{toc}{chapter}{Table of Contents}
     \tableofcontents
+    \cleardoublepage
 }
 
 \newcommand{\dedicationpage}{
@@ -98,13 +103,26 @@
     \cleardoublepage
 }
 
+
+\newcommand{\authorlist}{
+	\chapter*{Author List}
+	\noindent
+    \begin{spacing}{\dnormalspacing}
+    	\input{frontmatter/authorlist}
+    \end{spacing}
+	\vspace*{\fill} \newpage \rm
+    \cleardoublepage
+}
+
+
 \newcommand{\acknowledgments}{
 	\chapter*{Acknowledgments}
 	\noindent
     \begin{spacing}{\dnormalspacing}
     	\input{frontmatter/thanks}
     \end{spacing}
-	\vspace*{\fill} \newpage
+	\vspace*{\fill} \newpage \rm
+    \cleardoublepage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
 }

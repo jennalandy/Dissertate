@@ -1,23 +1,90 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-
-
 \documentclass{Dissertate}
+
+% For Harvard style
+\usepackage{packages/Harvard/parameterList}
+\usepackage{assets/schools/Harvard/style}
+
+% Added 
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[table,xcdraw]{xcolor}
+\RequirePackage{amsthm,amsmath,amsfonts,amssymb}
+\usepackage{natbib}
+\usepackage{multirow}
+\usepackage{makecell}
+\definecolor{highlight}{HTML}{D1D1D1}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\newtheoremstyle{indented}{3pt}{3pt}{\addtolength{\leftskip}{2.5em}}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{indented}
+\newtheorem{theorem}{Theorem}
+\newtheorem{property}{Property}
+
 
 \begin{document}
 
+
 % the front matter
+
 \input{frontmatter/personalize}
-% \maketitle
-% \copyrightpage
-\frontmatter
+% \frontmatter
+% customized front matter to include
+
+
+% Changed to include table of contents requirements for harvard
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Title Page}
+    \maketitle
+\cleardoublepage
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Copyright}
+    \copyrightpage
+\cleardoublepage
+
 \setstretch{\dnormalspacing}
-% \abstractpage
-% \tableofcontents
-% %\authorlist
-% \listoffigures
-% \dedicationpage
-% \acknowledgments
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Abstract}
+    \abstractpage
+\cleardoublepage
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Table of Contents}
+    \tableofcontents
+\cleardoublepage
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Author List}
+    \authorlist
+\cleardoublepage
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Listing of Figures}
+    \listoffigures
+\cleardoublepage
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Dedication}
+    \dedicationpage
+\cleardoublepage
+
+\cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Acknowledgments}
+    \acknowledgments
+\cleardoublepage
 
 % \doublespacing
 
@@ -32,13 +99,16 @@
 \setstretch{\dnormalspacing}
 
 % the back matter
-\backmatter
 
-% \clearpage
-% \bibliography{references}
-% \addcontentsline{toc}{chapter}{References}
-% \bibliographystyle{apalike2}
+\appendix
+\include{chapters/chapter1_appendix}
+\include{chapters/chapter2_appendix}
+\include{chapters/chapter3_appendix}
 
-% \include{endmatter/colophon}
+
+\clearpage
+\bibliography{references}
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{apalike2}
 
 \end{document}
